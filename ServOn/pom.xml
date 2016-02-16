@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.guce.siat</groupId>
-	<artifactId>siat</artifactId>
+	<groupId>org.bd</groupId>
+	<artifactId>easyServ</artifactId>
 	<version>1.0</version>
 	<packaging>pom</packaging>
 
-	<name>siat</name>
+	<name>easyServ</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -38,41 +38,12 @@
 		</dependency>
 	</dependencies>
 	<modules>
-		<!-- MODULES EN COMMUN -->
-<!-- 		<module>siat-utils</module> -->
-		<module>siat-common</module>
-		<!-- <module>siat-selenium</module> -->
-		<!-- MODULES EN COMMUN -->
+		
+		<module>easyServ-model</module>
+		<module>easyServ-dao</module>
+		<module>easyServ-service</module>
+		<module>easyServ-web</module>
 
-		<!-- CONTROLE TECHNIQUE -->
-		<module>siat-ct-core</module>
-		<module>siat-ct-web</module>
-		<!-- CONTROLE TECHNIQUE -->
-
-		<!-- CERTIFICAT D'ORIGINE -->
-		<module>siat-co-core</module>
-		<module>siat-co-web</module>
-		<!-- CERTIFICAT D'ORIGINE -->
-
-		<!-- AFFAIRES MARITIME -->
-		<module>siat-am-core</module>
-		<module>siat-am-web</module>
-		<!-- AFFAIRES MARITIME -->
-
-		<!-- FRETS TERRESTRE -->
-		<module>siat-ft-core</module>
-		<module>siat-ft-web</module>
-		<!-- FRETS TERRESTRE -->
-
-		<!-- SUIVI FINANCIERS -->
-		<module>siat-sf-core</module>
-		<module>siat-sf-web</module>
-		<!-- SUIVI FINANCIERS -->
-
-		<!-- CACAO CAFE -->
-		<module>siat-cc-core</module>
-		<module>siat-cc-web</module>
-		<!-- CACAO CAFE -->
 
 	</modules>
 	<build>
