@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.bd</groupId>
+	<artifactId>easyServ</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+	<name>easyServ</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<java.version>1.7</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.security.version>3.2.3.RELEASE</spring.security.version>
+		<spring.version>4.1.0.RELEASE</spring.version>
+		<aspectj.version>1.8.4</aspectj.version>
+		<cglib.version>3.1</cglib.version>
+		<hibernate.entitymanager.version>4.2.8.Final</hibernate.entitymanager.version>
+		<potgres.version>9.1-901-1.jdbc4</potgres.version>
+		<logback.version>1.1.1</logback.version>
+		<jcloverslf4j.version>1.7.6</jcloverslf4j.version>
+		<camel.version>2.15.1</camel.version>
+		<activiti.version>5.16.4</activiti.version>
+		<activemq.version>5.10.0</activemq.version>
+		<xbean.version>4.1</xbean.version>
+		<opencmis.version>0.11.0</opencmis.version>
+		<application.version>1.1</application.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<modules>
+		
+		<module>easyServ-model</module>
+<!-- 		<module>easyServ-dao</module> -->
+<!-- 		<module>easyServ-service</module> -->
+		<module>easyServ-web</module>
+
+
+	</modules>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
