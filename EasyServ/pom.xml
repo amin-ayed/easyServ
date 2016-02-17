@@ -39,9 +39,7 @@
 	</dependencies>
 	<modules>
 		
-		<module>easyServ-model</module>
-<!-- 		<module>easyServ-dao</module> -->
-<!-- 		<module>easyServ-service</module> -->
+		<module>easyServ-core</module>
 		<module>easyServ-web</module>
 
 
