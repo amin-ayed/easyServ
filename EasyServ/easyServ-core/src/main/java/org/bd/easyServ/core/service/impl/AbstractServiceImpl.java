@@ -1,38 +1,35 @@
-package org.guce.siat.common.service.impl;
+package org.bd.easyServ.core.service.impl;
 
 import java.io.Serializable;
 import java.util.List;
 
-import org.guce.siat.common.dao.AbstractJpaDao;
-import org.guce.siat.common.service.AbstractService;
-import org.guce.siat.common.service.annotations.Audit;
+import org.bd.easyServ.core.dao.AbstractJpaDao;
+import org.bd.easyServ.core.service.AbstractService;
 import org.springframework.transaction.annotation.Transactional;
-
 
 /**
  * The Class AbstractServiceImpl.
- *
+ * 
  * @param <T>
- *           the generic type
+ *            the generic type
  */
-public abstract class AbstractServiceImpl<T extends Serializable> implements AbstractService<T>
-{
+public abstract class AbstractServiceImpl<T extends Serializable> implements
+		AbstractService<T> {
 
 	/**
 	 * Gets the jpa dao.
-	 *
+	 * 
 	 * @return the jpa dao
 	 */
 	public abstract AbstractJpaDao<T> getJpaDao();
 
 	/**
 	 * Sets the jpa dao.
-	 *
+	 * 
 	 * @param jpaDao
-	 *           the new jpa dao
+	 *            the new jpa dao
 	 */
 	public abstract void setJpaDao(AbstractJpaDao<T> jpaDao);
-
 
 	/*
 	 * (non-Javadoc)
@@ -40,8 +37,7 @@ public abstract class AbstractServiceImpl<T extends Serializable> implements Abs
 	 * @see org.guce.siat.common.service.AbstractService#find(java.lang.Long)
 	 */
 	@Override
-	public T find(final Long id)
-	{
+	public T find(final Long id) {
 		return getJpaDao().find(id);
 	}
 
@@ -51,8 +47,7 @@ public abstract class AbstractServiceImpl<T extends Serializable> implements Abs
 	 * @see org.guce.siat.common.service.AbstractService#find(java.lang.String)
 	 */
 	@Override
-	public T find(final String id)
-	{
+	public T find(final String id) {
 		return getJpaDao().find(id);
 	}
 
@@ -62,11 +57,9 @@ public abstract class AbstractServiceImpl<T extends Serializable> implements Abs
 	 * @see org.guce.siat.common.service.AbstractService#findAll()
 	 */
 	@Override
-	public List<T> findAll()
-	{
+	public List<T> findAll() {
 		return getJpaDao().findAll();
 	}
-
 
 	/*
 	 * (non-Javadoc)
@@ -74,87 +67,80 @@ public abstract class AbstractServiceImpl<T extends Serializable> implements Abs
 	 * @see org.guce.siat.common.service.AbstractService#findActiveItems()
 	 */
 	@Override
-	public List<T> findActiveItems()
-	{
+	public List<T> findActiveItems() {
 		return getJpaDao().findActiveItems();
 	}
 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.guce.siat.common.service.AbstractService#save(java.io.Serializable)
+	 * @see
+	 * org.guce.siat.common.service.AbstractService#save(java.io.Serializable)
 	 */
 	@Transactional(readOnly = false)
-	@Audit(operationType = "SAVE")
 	@Override
-	public T save(final T entity)
-	{
+	public T save(final T entity) {
 		return getJpaDao().save(entity);
 	}
 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.guce.siat.common.service.AbstractService#update(java.io.Serializable)
+	 * @see
+	 * org.guce.siat.common.service.AbstractService#update(java.io.Serializable)
 	 */
 	@Transactional(readOnly = false)
-	@Audit(operationType = "UPDATE")
 	@Override
-	public void update(final T entity)
-	{
+	public void update(final T entity) {
 		getJpaDao().update(entity);
 	}
 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.guce.siat.common.service.AbstractService#delete(java.io.Serializable)
+	 * @see
+	 * org.guce.siat.common.service.AbstractService#delete(java.io.Serializable)
 	 */
 	@Transactional(readOnly = false)
-	@Audit(operationType = "DELETE")
 	@Override
-	public void delete(final T entity)
-	{
+	public void delete(final T entity) {
 		getJpaDao().delete(entity);
 	}
 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see org.guce.siat.common.service.AbstractService#deleteById(java.lang.Long)
+	 * @see
+	 * org.guce.siat.common.service.AbstractService#deleteById(java.lang.Long)
 	 */
 	@Transactional(readOnly = false)
-	@Audit(operationType = "DELETE")
 	@Override
-	public void deleteById(final Long entityId)
-	{
+	public void deleteById(final Long entityId) {
 		getJpaDao().deleteById(entityId);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
-	 * @see org.guce.siat.common.service.AbstractService#saveOrUpdateList(java.util.List)
+	 * 
+	 * @see
+	 * org.guce.siat.common.service.AbstractService#saveOrUpdateList(java.util
+	 * .List)
 	 */
 	@Transactional(readOnly = false)
-	@Audit(operationType = "SAVE")
 	@Override
-	public List<T> saveOrUpdateList(final List<T> entitiesList)
-	{
+	public List<T> saveOrUpdateList(final List<T> entitiesList) {
 		return getJpaDao().saveOrUpdateList(entitiesList);
 	}
 
 	/**
 	 * Delete list.
-	 *
+	 * 
 	 * @param entitiesList
-	 *           the entities list
+	 *            the entities list
 	 */
 	@Transactional(readOnly = false)
-	@Audit(operationType = "DELETE")
 	@Override
-	public void deleteList(final List<T> entitiesList)
-	{
+	public void deleteList(final List<T> entitiesList) {
 		getJpaDao().deleteList(entitiesList);
 	}
 

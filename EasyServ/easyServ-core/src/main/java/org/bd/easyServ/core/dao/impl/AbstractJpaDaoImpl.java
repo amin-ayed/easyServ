@@ -1,4 +1,4 @@
-package org.guce.siat.common.dao.impl;
+package org.bd.easyServ.core.dao.impl;
 
 import java.io.Serializable;
 import java.util.List;
@@ -7,8 +7,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import org.apache.commons.collections.CollectionUtils;
-import org.guce.siat.common.dao.AbstractJpaDao;
-import org.guce.siat.common.utils.Constants;
+import org.bd.easyServ.core.dao.AbstractJpaDao;
+import org.bd.easyServ.core.utils.Constants;
 
 
 /**

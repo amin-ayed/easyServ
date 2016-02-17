@@ -1,4 +1,4 @@
-package org.guce.siat.common.dao;
+package org.bd.easyServ.core.dao;
 
 import java.io.Serializable;
 import java.util.List;

@@ -1,4 +1,4 @@
-package org.bd.easyServ.common.model;
+package org.bd.easyServ.core.model;
 
 /**
  * The Class AbstractModel.

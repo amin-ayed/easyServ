@@ -1,4 +1,4 @@
-package org.bd.easyServ.common.model;
+package org.bd.easyServ.core.model;
 
 import java.io.Serializable;
 
@@ -17,11 +17,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * The Class User.
  */
 @javax.persistence.Entity
-@Table(name = "USERS", uniqueConstraints =
-{ @UniqueConstraint(columnNames =
-{ "LOGIN", "ENABLED", "DELETED" }) /*
-											   * , @UniqueConstraint(columnNames = { "EMAIL", "ENABLED", "DELETED" })
-											   */})
+@Table(name = "USERS")
 @XmlRootElement
 public class User extends AbstractModel implements Serializable
 {

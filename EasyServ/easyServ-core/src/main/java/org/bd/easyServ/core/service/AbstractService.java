@@ -1,4 +1,4 @@
-package org.guce.siat.common.service;
+package org.bd.easyServ.core.service;
 
 import java.io.Serializable;
 import java.util.List;

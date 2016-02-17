@@ -104,11 +104,7 @@
 			<version>3.7</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.guce.siat</groupId>
-			<artifactId>siat-cc-core</artifactId>
-			<version>1.0</version>
-		</dependency>
+		
 		<!-- dependances temporaires -->
 
 		<!-- add by jha -->
@@ -154,11 +150,16 @@
 			<version>3.1.1</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.bd</groupId>
+			<artifactId>easyServ-core</artifactId>
+			<version>1.0</version>
+		</dependency>
 	</dependencies>
 
 
 	<build>
-		<finalName>siat-cc-web</finalName>
+		<finalName>easyServ-web</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>

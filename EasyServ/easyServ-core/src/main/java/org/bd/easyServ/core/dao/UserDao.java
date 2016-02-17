@@ -1,17 +1,9 @@
 /*
  *
  */
-package org.guce.siat.common.dao;
+package org.bd.easyServ.core.dao;
 
-import java.util.List;
-
-import org.guce.siat.common.model.Administration;
-import org.guce.siat.common.model.Bureau;
-import org.guce.siat.common.model.User;
-import org.guce.siat.common.utils.enums.FileTypeCode;
-import org.guce.siat.common.utils.enums.PositionType;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.bd.easyServ.core.model.User;
 
 
 
@@ -21,16 +13,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 public interface UserDao extends AbstractJpaDao<User>
 {
 
-	/**
-	 * Load user by username.
-	 *
-	 * @param username
-	 *           the username
-	 * @return the user details
-	 * @throws UsernameNotFoundException
-	 *            the username not found exception
-	 */
-	UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
+	
 
 	/**
 	 * Creates the user.
@@ -66,14 +49,6 @@ public interface UserDao extends AbstractJpaDao<User>
 	 */
 	User findByMail(String email);
 
-	/**
-	 * Update fail attempts.
-	 *
-	 * @param user
-	 *           the user
-	 * @return the user
-	 */
-	User updateFailAttempts(User user);
 
 	
 
