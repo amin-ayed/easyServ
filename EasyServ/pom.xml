@@ -24,7 +24,7 @@
 		<jcloverslf4j.version>1.7.6</jcloverslf4j.version>
 		<camel.version>2.15.1</camel.version>
 		<activiti.version>5.16.4</activiti.version>
-		<activemq.version>5.10.0</activemq.version>
+		<activemq.version>5.18.0</activemq.version>
 		<xbean.version>4.1</xbean.version>
 		<opencmis.version>0.11.0</opencmis.version>
 		<application.version>1.1</application.version>
