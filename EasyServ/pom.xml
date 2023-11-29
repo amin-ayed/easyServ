@@ -20,7 +20,7 @@
 		<cglib.version>3.1</cglib.version>
 		<hibernate.entitymanager.version>4.2.8.Final</hibernate.entitymanager.version>
 		<potgres.version>9.1-901-1.jdbc4</potgres.version>
-		<logback.version>1.1.1</logback.version>
+		<logback.version>1.4.12</logback.version>
 		<jcloverslf4j.version>1.7.6</jcloverslf4j.version>
 		<camel.version>2.15.1</camel.version>
 		<activiti.version>5.16.4</activiti.version>
